@@ -1,6 +1,6 @@
 - name: Install apache2 web server
   become: true
-  apt: pkg={{ item }} state=installed update_cache=true
+  apt: pkg={{ item }} state=latest update_cache=true
   with_items:
   - apache2
   - libapache2-mod-fastcgi
