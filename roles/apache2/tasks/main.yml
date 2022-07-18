@@ -1,9 +1,9 @@
 - name: Install apache2 web server
   become: true
   apt: pkg={{ item }} state=latest update_cache=true
-  with_items:
+  loop:
   - apache2
- # - libapache2-mod-fastcgi
+  - libapache2-mod-fastcgi
 
 - name: Enable apache2 modules
   become: yes
